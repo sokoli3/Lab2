@@ -9,7 +9,6 @@ import edu.illinois.cs.cs125.lib.mazemaker.Maze;
  */
 @SuppressWarnings("checkstyle:emptyblock")
 public class SolveMaze {
-
     /**
      * Implement your maze solving algorithm in the main method below.
      *
@@ -33,8 +32,19 @@ public class SolveMaze {
          * You should be able to solve a 10 x 10 maze in (far fewer than) 1000 steps.
          * Feel free to adjust this number if you experiment with other mazes.
          */
+        boolean isFinished;
+        boolean canMove;
+        int move() = +1;
+        int turnRight() = ;
+        int turnLeft() = ;
         for (int step = 0; step < 1000; step++) {
-            // Implement your maze solving algorithm here
+            while(isFinished == false) {
+                turnLeft();
+                while(canMove() == false){
+                    turnRight();
+                }
+                move();
+            }
         }
 
         if (maze.isFinished()) {
